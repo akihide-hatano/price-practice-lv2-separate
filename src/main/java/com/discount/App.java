@@ -42,7 +42,7 @@ public class App
                 return;
             }
 
-            //
+            //プレミアム会員であるかどうかを表示させる
             boolean isPremium;
             if( "yes".equalsIgnoreCase(input)){
                 isPremium = true;
