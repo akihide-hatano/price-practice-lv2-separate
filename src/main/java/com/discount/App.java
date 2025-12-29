@@ -24,8 +24,22 @@ public class App
 
             try {
                 price = Integer.parseInt(priceInput);
+                if(price < 0 ){
+                    System.out.println("価格は0以上で入力してください");
+                    return;
+                }
             } catch (Exception e) {
-                // TODO: handle exception
+                System.out.println("数字で入力してください（例: 1200）");
+                return;
+            }
+
+            // 2. 会員区分入力
+            System.out.println("プレミアム会員ですか？ yes / no / q(終了) > ");
+            String input = scanner.nextLine().trim();
+
+            if("q".equalsIgnoreCase(input)){
+                System.out.println("終了します。ありがとうございました。");
+                return;
             }
         }
     }
