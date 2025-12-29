@@ -41,6 +41,27 @@ public class App
                 System.out.println("終了します。ありがとうございました。");
                 return;
             }
+
+            //
+            boolean isPremium;
+            if( "yes".equalsIgnoreCase(input)){
+                isPremium = true;
+            }else if( "no".equalsIgnoreCase(input)){
+                isPremium = false;
+            }else{
+                System.out.println("yes/no/qを入力してください。");
+                return;
+            }
+
+            //計算ロジックの表示
+            double finalPrice = calculator.calculate(price, isPremium);
+
+            //結果表示
+            if(isPremium){
+                System.out.println("プレミアム会員割引後の価格:"+ finalPrice + "円");
+            }else{
+                System.out.println("通常価格" + finalPrice + "円");
+            }
         }
     }
 }
