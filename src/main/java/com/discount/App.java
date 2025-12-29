@@ -20,9 +20,9 @@ public class App
                 //1.価格入力
                 System.out.println("商品価格を入力してください > ");
                 String priceInput = scanner.nextLine().trim();
-    
+
                 int price;
-    
+
                 try {
                     price = Integer.parseInt(priceInput);
                     if(price < 0 ){
@@ -52,7 +52,7 @@ public class App
                     isPremium = false;
                 }else{
                     System.out.println("yes/no/qを入力してください。");
-                    return;
+                    continue;
                 }
                 //計算ロジックの表示
                 double finalPrice = calculator.calculate(price, isPremium);
